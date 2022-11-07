@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dd.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlContentCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_minus5sdp"
+    app:sl_cornerRadius="@dimen/primary_shadow_radius"
+    app:sl_dx="0dp"
+    app:sl_dy="@dimen/_2sdp"
+    app:sl_shadowColor="@color/primaryShadowColor"
+    app:sl_shadowRadius="@dimen/shadow_layout_shadow_radius">
+
+    <LinearLayout
+        android:id="@+id/rlMainOfferBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_secondary_background_shape"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_7sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/llContentCardCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.skydoves.androidveil.VeilLayout
+                    android:id="@+id/veilLayoutTvContentCardCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:paddingTop="@dimen/_9sdp"
+                    app:veilLayout_baseAlpha="@dimen/shimmer_base_alpha"
+                    app:veilLayout_baseColor="@color/shimmerLightColor"
+                    app:veilLayout_dropOff="@dimen/shimmer_dropOff_alpha"
+                    app:veilLayout_highlightAlpha="@dimen/shimmer_highlight_alpha"
+                    app:veilLayout_highlightColor="@color/shimmerDarkColor"
+                    app:veilLayout_radius="@dimen/shimmer_radius"
+                    app:veilLayout_shimmerEnable="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvContentCardCategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/formular_regular"
+                            android:letterSpacing="-0.02"
+                            android:lineHeight="@dimen/_10ssp"
+                            android:lineSpacingExtra="@dimen/_1ssp"
+                            android:maxLines="2"
+                            android:text="Новость"
+                            android:textColor="@color/accentColor"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </com.skydoves.androidveil.VeilLayout>
+
+                <TextView
+                    android:id="@+id/tvContentCardCategoryNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/formular_medium"
+                    android:letterSpacing="-0.01"
+                    android:lineHeight="@dimen/_16ssp"
+                    android:lineSpacingExtra="@dimen/_5ssp"
+                    android:maxLines="2"
+                    android:paddingTop="14dp"
+                    android:text="Текст контента"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.skydoves.androidveil.VeilLayout
+                android:id="@+id/veilLayoutTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llContentCardCategory"
+                app:veilLayout_baseAlpha="@dimen/shimmer_base_alpha"
+                app:veilLayout_baseColor="@color/shimmerLightColor"
+                app:veilLayout_dropOff="@dimen/shimmer_dropOff_alpha"
+                app:veilLayout_highlightAlpha="@dimen/shimmer_highlight_alpha"
+                app:veilLayout_highlightColor="@color/shimmerDarkColor"
+                app:veilLayout_radius="@dimen/shimmer_radius"
+                app:veilLayout_shimmerEnable="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/formular_regular"
+                        android:letterSpacing="-0.01"
+                        android:lineHeight="@dimen/_17ssp"
+                        android:lineSpacingExtra="@dimen/_5ssp"
+                        android:text="Описание контента"
+                        android:textColor="@color/mainTextColor"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </com.skydoves.androidveil.VeilLayout>
+
+            <com.skydoves.androidveil.VeilLayout
+                android:id="@+id/veilLayoutTextView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/veilLayoutTextView2"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/veilLayoutTextView2"
+                app:veilLayout_baseAlpha="@dimen/shimmer_base_alpha"
+                app:veilLayout_baseColor="@color/shimmerLightColor"
+                app:veilLayout_dropOff="@dimen/shimmer_dropOff_alpha"
+                app:veilLayout_highlightAlpha="@dimen/shimmer_highlight_alpha"
+                app:veilLayout_highlightColor="@color/shimmerDarkColor"
+                app:veilLayout_radius="@dimen/shimmer_radius"
+                app:veilLayout_shimmerEnable="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/formular_regular"
+                        android:letterSpacing="-0.02"
+                        android:lineHeight="@dimen/_10ssp"
+                        android:lineSpacingExtra="@dimen/_1ssp"
+                        android:text="20 марта 2022"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </com.skydoves.androidveil.VeilLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.skydoves.androidveil.VeilLayout
+            android:id="@+id/veilLayoutTvProfileHeaderWishlistValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="center_vertical|right"
+            app:veilLayout_baseAlpha="@dimen/shimmer_base_alpha"
+            app:veilLayout_baseColor="@color/shimmerLightColor"
+            app:veilLayout_dropOff="@dimen/shimmer_dropOff_alpha"
+            app:veilLayout_highlightAlpha="@dimen/shimmer_highlight_alpha"
+            app:veilLayout_highlightColor="@color/shimmerDarkColor"
+            app:veilLayout_radius="@dimen/shimmer_radius"
+            app:veilLayout_shimmerEnable="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llContentBlock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight="0.35"
+                    android:gravity="center_vertical|right">
+
+                    <com.dd.ShadowLayout
+                        android:id="@+id/cardViewBlock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:sl_cornerRadius="10dp"
+                        app:sl_dx="0dp"
+                        app:sl_dy="0dp"
+                        app:sl_shadowColor="@color/fullTransparent"
+                        app:sl_shadowRadius="@dimen/shadow_layout_shadow_radius">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardView"
+                                android:layout_width="@dimen/_57sdp"
+                                android:layout_height="@dimen/_57sdp"
+                                android:layout_alignParentEnd="true"
+                                android:visibility="visible"
+                                app:cardCornerRadius="@dimen/_4sdp"
+                                app:cardElevation="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:srcCompat="@tools:sample/avatars" />
+                            </androidx.cardview.widget.CardView>
+
+                            <RelativeLayout
+                                android:id="@+id/rlNotificationsReadedMarkerCustom"
+                                android:layout_width="@dimen/_5sdp"
+                                android:layout_height="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_marginEnd="@dimen/_6sdp"
+                                android:background="@drawable/notifications_readed_marker"
+                                android:visibility="gone"
+                                app:layout_constraintCircleRadius="@dimen/_50sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"></RelativeLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.dd.ShadowLayout>
+
+                    <com.dd.ShadowLayout
+                        android:id="@+id/cardViewNotifications"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sl_cornerRadius="50dp"
+                        app:sl_dx="0dp"
+                        app:sl_dy="0dp"
+                        app:sl_shadowColor="@color/primaryShadowColor"
+                        app:sl_shadowRadius="@dimen/shadow_layout_shadow_radius">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clWishlistHeaderBuilderLogo"
+                            android:layout_width="@dimen/_43sdp"
+                            android:layout_height="@dimen/_43sdp"
+                            android:background="@drawable/card_secondary_background_shape_circle"
+                            android:gravity="center"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/imageViewNotifications"
+                                android:layout_width="@dimen/_17sdp"
+                                android:layout_height="@dimen/_17sdp"
+                                android:layout_gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <RelativeLayout
+                                android:id="@+id/rlNotificationsReadedMarker"
+                                android:layout_width="@dimen/_5sdp"
+                                android:layout_height="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_marginEnd="@dimen/_6sdp"
+                                android:background="@drawable/notifications_readed_marker"
+                                app:layout_constraintCircleRadius="@dimen/_50sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </RelativeLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.dd.ShadowLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.skydoves.androidveil.VeilLayout>
+
+    </LinearLayout>
+</com.dd.ShadowLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="shadow_layout_shadow_radius">@dimen/_7sdp</dimen>
+    <dimen name="pageMarginAndOffset">30dp</dimen>
+    <dimen name="primary_shadow_radius">10dp</dimen>
+    <dimen name="primary_shadow_y_offset">@dimen/_2sdp</dimen>
+    <dimen name="main_card_radius">@dimen/_7sdp</dimen>
+    <dimen name="progress_thumb_custom_size">@dimen/_28sdp</dimen>
+    <dimen name="progress_custom_size">@dimen/_10sdp</dimen>
+
+    <dimen name="shimmer_radius">@dimen/_4sdp</dimen>
+    <dimen name="shimmer_base_alpha">0.9</dimen>
+    <dimen name="shimmer_highlight_alpha">1.0</dimen>
+    <dimen name="shimmer_dropOff_alpha">0.8</dimen>
+
+</resources>

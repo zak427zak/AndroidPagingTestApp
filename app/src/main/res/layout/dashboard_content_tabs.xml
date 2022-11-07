@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/abc12"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_tabs"
+        android:paddingBottom="@dimen/_1sdp">
+
+        <RadioGroup
+            android:id="@+id/rgChangeWishlistView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:background="@drawable/radio_buttons_group_tab_background"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_2sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clNewsBlock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.dd.ShadowLayout
+                    android:id="@+id/slNewsBlockSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sl_cornerRadius="@dimen/primary_shadow_radius"
+                    app:sl_dx="0dp"
+                    app:sl_dy="@dimen/_1sdp"
+                    app:sl_shadowColor="@color/primaryShadowColor"
+                    app:sl_shadowRadius="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_secondary_background_shape"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_8sdp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/formular_medium"
+                            android:gravity="center"
+                            android:letterSpacing="-0.04"
+                            android:lineHeight="@dimen/_13ssp"
+                            android:lineSpacingExtra="@dimen/_4ssp"
+                            android:text="Новости"
+                            android:textColor="@color/mainTextColor"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:visibility="visible"
+
+                            />
+
+                    </LinearLayout>
+                </com.dd.ShadowLayout>
+
+                <com.dd.ShadowLayout
+                    android:id="@+id/slNewsBlockUnselected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sl_cornerRadius="@dimen/primary_shadow_radius"
+                    app:sl_dx="0dp"
+                    app:sl_dy="@dimen/_1sdp"
+                    app:sl_shadowColor="@color/transparentShadowColor"
+                    app:sl_shadowRadius="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_secondary_background_shape"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_8sdp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/formular_medium"
+                            android:gravity="center"
+                            android:letterSpacing="-0.04"
+                            android:lineHeight="@dimen/_13ssp"
+                            android:lineSpacingExtra="@dimen/_4ssp"
+                            android:text="Новости"
+                            android:textColor="@color/secondaryTextColor"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:visibility="visible"
+
+                            />
+
+                    </LinearLayout>
+                </com.dd.ShadowLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clOffersBlock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.dd.ShadowLayout
+                    android:id="@+id/slOffersBlockSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sl_cornerRadius="@dimen/primary_shadow_radius"
+                    app:sl_dx="0dp"
+                    app:sl_dy="@dimen/_1sdp"
+                    app:sl_shadowColor="@color/primaryShadowColor"
+                    app:sl_shadowRadius="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_secondary_background_shape"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_8sdp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/formular_medium"
+                            android:gravity="center"
+                            android:letterSpacing="-0.04"
+                            android:lineHeight="@dimen/_13ssp"
+                            android:lineSpacingExtra="@dimen/_4ssp"
+                            android:text="Предложения"
+                            android:textColor="@color/mainTextColor"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:visibility="visible"
+
+                            />
+
+                    </LinearLayout>
+                </com.dd.ShadowLayout>
+
+                <com.dd.ShadowLayout
+                    android:id="@+id/slOffersBlockUnselected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sl_cornerRadius="@dimen/primary_shadow_radius"
+                    app:sl_dx="0dp"
+                    app:sl_dy="@dimen/_1sdp"
+                    app:sl_shadowColor="@color/transparentShadowColor"
+                    app:sl_shadowRadius="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_secondary_background_shape"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_8sdp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/formular_medium"
+                            android:gravity="center"
+                            android:letterSpacing="-0.04"
+                            android:lineHeight="@dimen/_13ssp"
+                            android:lineSpacingExtra="@dimen/_4ssp"
+                            android:text="Предложения"
+                            android:textColor="@color/secondaryTextColor"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:visibility="visible"
+
+                            />
+
+                    </LinearLayout>
+                </com.dd.ShadowLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clNotificationsBlock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.dd.ShadowLayout
+                    android:id="@+id/slNotificationsBlockSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sl_cornerRadius="@dimen/primary_shadow_radius"
+                    app:sl_dx="0dp"
+                    app:sl_dy="@dimen/_1sdp"
+                    app:sl_shadowColor="@color/primaryShadowColor"
+                    app:sl_shadowRadius="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_secondary_background_shape"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_8sdp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/formular_medium"
+                            android:gravity="center"
+                            android:letterSpacing="-0.04"
+                            android:lineHeight="@dimen/_13ssp"
+                            android:lineSpacingExtra="@dimen/_4ssp"
+                            android:text="События"
+                            android:textColor="@color/mainTextColor"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:visibility="visible"
+
+                            />
+
+                    </LinearLayout>
+                </com.dd.ShadowLayout>
+
+                <com.dd.ShadowLayout
+                    android:id="@+id/slNotificationsBlockUnselected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sl_cornerRadius="@dimen/primary_shadow_radius"
+                    app:sl_dx="0dp"
+                    app:sl_dy="@dimen/_1sdp"
+                    app:sl_shadowColor="@color/transparentShadowColor"
+                    app:sl_shadowRadius="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_secondary_background_shape"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_8sdp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/formular_medium"
+                            android:gravity="center"
+                            android:letterSpacing="-0.04"
+                            android:lineHeight="@dimen/_13ssp"
+                            android:lineSpacingExtra="@dimen/_4ssp"
+                            android:text="События"
+                            android:textColor="@color/secondaryTextColor"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal"
+                            android:visibility="visible"
+
+                            />
+
+                    </LinearLayout>
+                </com.dd.ShadowLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RadioGroup>
+
+    </FrameLayout>
+
+</LinearLayout>
