@@ -65,7 +65,7 @@
                             android:lineHeight="@dimen/_10ssp"
                             android:lineSpacingExtra="@dimen/_1ssp"
                             android:maxLines="2"
-                            android:text="Новость"
+                            android:text="Новости"
                             android:textColor="@color/accentColor"
                             android:textSize="@dimen/_10ssp"
                             android:textStyle="normal"
