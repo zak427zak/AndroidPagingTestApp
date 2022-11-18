@@ -18,9 +18,8 @@ class ViewModelFactory(
         key: String, modelClass: Class<T>, handle: SavedStateHandle
     ): T {
         if (modelClass.isAssignableFrom(SearchRepositoriesViewModel::class.java)) {
-            @Suppress("UNCHECKED_CAST") return SearchRepositoriesViewModel(
-                repository, handle, repositoryUrl
-            ) as T
+            @Suppress("UNCHECKED_CAST")
+            return SearchRepositoriesViewModel(repository, handle, repositoryUrl) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

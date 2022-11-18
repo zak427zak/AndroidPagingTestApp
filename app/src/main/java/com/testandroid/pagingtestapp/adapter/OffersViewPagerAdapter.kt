@@ -29,27 +29,13 @@ class OffersViewPagerAdapter(
 
     private var onClickListener: OffersContentAdapter.OnClickListener? = null
 
-    class ViewHolder(binding: OffersViewPagerInterfaceBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        val mainRecycler = binding.list
-        val mainRecyclerPlaceholder = binding.emptyList
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        ViewHolder(
             OffersViewPagerInterfaceBinding.inflate(
                 LayoutInflater.from(parent.context), parent, false
             )
         )
-    }
 
-    override fun getItemCount(): Int {
-        return items.size
-    }
-
-    fun setOnClickListener(onClickListener: OffersContentAdapter.OnClickListener) {
-        this.onClickListener = onClickListener
-    }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentModel = ViewModelProvider(
@@ -61,6 +47,17 @@ class OffersViewPagerAdapter(
         holder.bindState(
             uiState = currentModel.state, uiActions = currentModel.accept, holder
         )
+    }
+
+    override fun getItemCount(): Int = items.size
+
+    class ViewHolder(binding: OffersViewPagerInterfaceBinding) :RecyclerView.ViewHolder(binding.root) {
+        val mainRecycler = binding.list
+        val mainRecyclerPlaceholder = binding.emptyList
+    }
+
+    fun setOnClickListener(onClickListener: OffersContentAdapter.OnClickListener) {
+        this.onClickListener = onClickListener
     }
 
 

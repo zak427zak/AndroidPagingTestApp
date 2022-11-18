@@ -11,6 +11,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.testandroid.pagingtestapp.R
 import com.testandroid.pagingtestapp.adapter.OffersViewPagerAdapter
 import com.testandroid.pagingtestapp.databinding.FragmentDashboardBinding
+import com.testandroid.pagingtestapp.ui.dashboard.arch.PagerAdapter
 
 class DashboardFragment : Fragment(), View.OnClickListener {
     private lateinit var dashboardViewModel: DashboardViewModel
@@ -31,13 +32,14 @@ class DashboardFragment : Fragment(), View.OnClickListener {
         val root: View = binding.root
 
         // Create variations carousel
-        val itemsHeaders: List<String> = listOf(
-            "news", "offers", "notifications"
-        )
+        val itemsHeaders: List<String> = listOf("news", "offers", "notifications")
+        //"user/test-content/${items[position]}?"
+        //"news", "offers", "notifications"
 
         // Create viewer slider for content variations
         viewPager2 = binding.viewPager
-        val adapter = OffersViewPagerAdapter(context, itemsHeaders, this)
+//        val adapter = OffersViewPagerAdapter(context, itemsHeaders, this)
+        val adapter = PagerAdapter(arrayOf("news", "offers", "notifications"), this)
         viewPager2!!.adapter = adapter
 
         viewPager2!!.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {

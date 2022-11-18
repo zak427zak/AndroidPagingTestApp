@@ -11,8 +11,9 @@ import com.testandroid.pagingtestapp.databinding.RecyclerOffersContentCardBindin
 /**
  * Adapter for the list of repositories.
  */
-class ReposAdapter(private val context: Context) :
-    ListAdapter<NewContent, RepoViewHolder>(REPO_COMPARATOR) {
+class ReposAdapter(
+    private val context: Context
+) : ListAdapter<NewContent, RepoViewHolder>(REPO_COMPARATOR) {
 
     private var onClickListener: OnClickListener? = null
 
