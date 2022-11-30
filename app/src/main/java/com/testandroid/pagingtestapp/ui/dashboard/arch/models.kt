@@ -20,5 +20,31 @@ sealed interface ViewEntities {
         val contentType: String = content.contentType
         val reportId: String = content.reportId
         val globalContentType: String = content.globalContentType
+
+        override fun equals(other: Any?): Boolean {
+            if (this === other) return true
+            if (other !is ContentItem) return false
+
+            if (content != other.content) return false
+            if (id != other.id) return false
+            if (complexId != other.complexId) return false
+            if (title != other.title) return false
+            if (text != other.text) return false
+            if (description != other.description) return false
+            if (image != other.image) return false
+            if (createdAt != other.createdAt) return false
+            if (innerContentType != other.innerContentType) return false
+            if (isViewed != other.isViewed) return false
+            if (isReport != other.isReport) return false
+            if (isCustomNotification != other.isCustomNotification) return false
+            if (contentType != other.contentType) return false
+            if (reportId != other.reportId) return false
+            if (globalContentType != other.globalContentType) return false
+
+            return true
+        }
+
+        override fun hashCode(): Int = id.toInt()
+
     }
 }

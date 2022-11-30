@@ -14,7 +14,7 @@ class ViewModelFactory(
     private val repositoryUrl: String
 ) : AbstractSavedStateViewModelFactory(owner, null) {
 
-    override fun <T : ViewModel?> create(
+    override fun <T : ViewModel> create(
         key: String, modelClass: Class<T>, handle: SavedStateHandle
     ): T {
         if (modelClass.isAssignableFrom(SearchRepositoriesViewModel::class.java)) {

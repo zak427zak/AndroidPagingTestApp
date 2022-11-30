@@ -1,6 +1,5 @@
 package com.testandroid.pagingtestapp.ui.dashboard.arch
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -14,7 +13,7 @@ private val COMPARATOR = object : DiffUtil.ItemCallback<ViewEntities>() {
     override fun areItemsTheSame(old: ViewEntities, new: ViewEntities): Boolean =
         when{
             old is ViewEntities.ContentItem && new is ViewEntities.ContentItem ->
-                new.text == old.text
+                new.id == old.id
             else -> false
         }
 
@@ -38,7 +37,6 @@ class PagingAdapter(
         val context = parent.context
         val inflater = LayoutInflater.from(context)
         return if(viewType == LOADING){
-//            Log.i("jorik", "create loading")
             Loading(ItemLoadingBinding.inflate(inflater, parent, false))
         } else {
             RepoViewHolder(RecyclerOffersContentCardBinding.inflate(inflater, parent, false), context)
@@ -48,7 +46,6 @@ class PagingAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(val item = getItem(position)){
             is ViewEntities.Loading -> {
-//                Log.i("jorik", "showLoading")
                 if(holder.bindingAdapterPosition == 0) return
                 loadMore()
             }
@@ -57,7 +54,7 @@ class PagingAdapter(
     }
 
     override fun getItemViewType(position: Int): Int =
-        if(getItem(position) is ViewEntities.Loading) 0 else 1
+        if(getItem(position) is ViewEntities.Loading) LOADING else ITEM
 
     class Loading(binding :ItemLoadingBinding) :RecyclerView.ViewHolder(binding.root)
 }

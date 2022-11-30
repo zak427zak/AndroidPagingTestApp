@@ -12,3 +12,14 @@ data class RepoSearchResponse(
     @SerializedName("items") val items: List<NewContent> = emptyList(),
     val nextPage: Int? = null
 )
+
+data class StatusUpdates(
+    val contentUpdates :Updates,
+    val howManyUnreaded :Int
+)
+
+data class Updates(
+    val needUpdateNews :Boolean,
+    val needUpdateNotifications :Boolean,
+    val needUpdateOffers :Boolean
+)
